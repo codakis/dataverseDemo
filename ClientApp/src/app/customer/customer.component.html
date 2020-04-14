@@ -1,0 +1,13 @@
+<ng-container *ngIf="(customer$ | async) as customer; else loading">
+
+    <h1>{{ customer.custID }}</h1>
+    <ul>
+        <li>{{ customer.firstName }}</li>
+        <li>{{ customer.lastName }}</li>
+        <li>{{ customer.address }}</li>
+        <li>{{ customer.phone }}</li>
+        <li>{{ customer.email }}</li>
+    </ul>
+
+</ng-container>
+<ng-template #loading>Loading…</ng-template>
